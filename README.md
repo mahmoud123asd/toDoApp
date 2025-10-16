@@ -1,16 +1,64 @@
-# to_do
+# 📝 To-Do App
 
-A new Flutter project.
+A simple and efficient **task management app** built with **Flutter**, designed to help users stay organized, track their progress, and manage daily tasks with ease.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🌟 Features
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ **Task Categories** — Create and customize categories with names and icons.  
+- 🗂 **Task Management** — Add, edit, and delete tasks within each category.  
+- 📊 **Progress Tracking** — Visual indicators show your completed and uncompleted tasks.  
+- 📅 **Live Reports** — See real-time statistics of all created, completed, and pending tasks, plus efficiency rate.  
+- 💾 **Offline Storage** — Uses **Hive** for fast and reliable local data storage.  
+- ⚡ **State Management** — Powered by **GetX** for smooth, reactive UI updates.  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|------------|-------------|
+| **UI Framework** | Flutter |
+| **State Management** | GetX |
+| **Local Database** | Hive |
+
+---
+
+## 📱 Screens Overview
+
+- **Home Page:** Displays all task categories with progress bars.  
+- **Tasks Page:** Add, remove, and complete tasks under a specific category.  
+- **Report Page:** View real-time statistics for efficiency, completed, and total tasks.
+
+---
+## 📸 Screenshots
+
+Here are the main app screens:
+
+### 🏠 Home Screen
+![Home](assets/home.png)
+
+### 🗂️ Category Screen
+![Category](assets/category.png)
+
+### ➕ Add Task Screen
+![Add Task](assets/add%20task.png)
+
+### 📋 Tasks Screen
+![Tasks](assets/tasks.png)
+
+### 🗑️ Delete Task Example
+![Delete](assets/delete.png)
+
+### 📊 Report Page
+![Report](assets/report.png)
+
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/mahmoud123asd/toDoApp.git
