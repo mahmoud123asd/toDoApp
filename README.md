@@ -36,23 +36,13 @@ A simple and efficient **task management app** built with **Flutter**, designed 
 
 Here are the main app screens:
 
-### 🏠 Home Screen
-![Home](assets/home.png)
+| 🏠 Home Screen | 🗂️ Category Screen | ➕ Add Task Screen |
+|:----------------:|:------------------:|:------------------:|
+| ![Home](assets/home.png) | ![Category](assets/category.png) | ![Add Task](assets/add%20task.png) |
 
-### 🗂️ Category Screen
-![Category](assets/category.png)
-
-### ➕ Add Task Screen
-![Add Task](assets/add%20task.png)
-
-### 📋 Tasks Screen
-![Tasks](assets/tasks.png)
-
-### 🗑️ Delete Task Example
-![Delete](assets/delete.png)
-
-### 📊 Report Page
-![Report](assets/report.png)
+| 📋 Tasks Screen | 🗑️ Delete Task Example | 📊 Report Page |
+|:----------------:|:-----------------------:|:----------------:|
+| ![Tasks](assets/tasks.png) | ![Delete](assets/delete.png) | ![Report](assets/report.png) |
 
 
 ## 🚀 Getting Started
