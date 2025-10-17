@@ -53,12 +53,20 @@ class TaskController extends GetxController {
     }
   }
 
-  void deleteTask(TaskCategory category, int index) {
-    category.tasks.removeAt(index);
-    category.save();
-    loadCategories();
-    update();
-  }
+  // void deleteTask(TaskCategory category, int index) {
+  //   category.tasks.removeAt(index);
+  //   category.save();
+  //   loadCategories();
+  //   update();
+  // }
+  void deleteTaskByItem(TaskCategory category, TaskItem task) {
+  final updatedTasks = List<TaskItem>.from(category.tasks);
+  updatedTasks.remove(task);
+  category.tasks = updatedTasks;
+  category.save();
+  loadCategories();
+  update();
+}
 
   void deleteCategory(TaskCategory category) async {
     await category.delete(); // Deletes from Hive

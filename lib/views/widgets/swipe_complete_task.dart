@@ -48,7 +48,10 @@ class SwipeCompleteTask extends StatelessWidget {
                 TextButton(
                     onPressed: () {
                       //to do
-                      taskcontroller.deleteTask(taskcategory, index);
+                      final taskToDelete = taskcontroller
+                          .completedTasksList(taskcategory)[index];
+                      taskcontroller.deleteTaskByItem(
+                          taskcategory, taskToDelete);
                       Get.back();
                     },
                     child: Text('Delete')),
