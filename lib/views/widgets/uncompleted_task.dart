@@ -64,7 +64,14 @@ class UncompletedTask extends StatelessWidget {
                 controller.toggleTaskCompletion(category, task);
               },
             ),
-            Text(task.title),
+            Expanded(
+              child: Text(
+                task.title,
+                softWrap: true,
+                overflow: TextOverflow.visible,
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
           ],
         );
       },

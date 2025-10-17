@@ -95,6 +95,9 @@ class TasksDetailsView extends StatelessWidget {
                     }),
                   ),
                   TextFormField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
+                    minLines: 1,
                     controller: controller,
                     decoration: InputDecoration(
                         suffixIcon: IconButton(
