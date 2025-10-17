@@ -6,11 +6,16 @@ class HomeController extends GetxController {
   //     PersistentTabController(initialIndex: 0);
   RxInt tabIndex = 0.obs;
   RxBool isDeleting = false.obs;
+  RxBool willdelted = false.obs;
   void changeTab(int i) => tabIndex.value = i;
   // void homeindex() {
   //   tabcontroller.index = 0;
   // }
   void changeDeleting(bool value) {
     isDeleting.value = value;
+  }
+
+  void cahngeWillDeleted(bool value) {
+    willdelted.value = value;
   }
 }

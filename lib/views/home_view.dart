@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 18, right: 18),
+            padding: const EdgeInsets.fromLTRB(18, 20, 18, 0),
             child: Obx(
               () {
                 return GridView.builder(

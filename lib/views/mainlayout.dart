@@ -30,29 +30,44 @@ class _MainLayoutState extends State<MainLayout> {
     return Obx(() {
       final currentIndex = homeController.tabIndex.value;
       final isDeleting = homeController.isDeleting.value;
-
+      final willDelted = homeController.willdelted.value;
       return Scaffold(
         resizeToAvoidBottomInset: false,
         floatingActionButton: DragTarget<TaskCategory>(
-          // onWillAccept: (data) {
-          //   homeController.changeDeleting(true);
-          //   return true;
-          // },
-          // onLeave: (data) => homeController.changeDeleting(false),
+          onWillAccept: (data) {
+            homeController.cahngeWillDeleted(true);
+            return true;
+          },
+          onLeave: (data) {
+            homeController.cahngeWillDeleted(false);
+          },
           onAcceptWithDetails: (DragTargetDetails<TaskCategory> data) {
             taskcontroller.deleteCategory(data.data);
             homeController.changeDeleting(false);
+            homeController.willdelted.value = false;
             EasyLoading.showSuccess("Deleted");
           },
-          builder: (context, candidateData, rejectedData) =>
-              FloatingActionButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
-                  backgroundColor: (isDeleting) ? Colors.red : Colors.green,
-                  elevation: 5,
-                  onPressed: () => homeController.changeTab(1),
-                  child: Icon((isDeleting) ? Icons.delete : Icons.add,
-                      size: 30, color: Colors.white)),
+          builder: (context, candidateData, rejectedData) => AnimatedContainer(
+            decoration: BoxDecoration(shape: BoxShape.circle),
+            clipBehavior: Clip.antiAlias,
+            duration: Duration(milliseconds: 200),
+            width: (isDeleting) ? 80 : 60,
+            height: (isDeleting) ? 80 : 60,
+            child: FloatingActionButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                backgroundColor: (isDeleting) ? Colors.red : Colors.green,
+                elevation: 5,
+                onPressed: () => homeController.changeTab(1),
+                child: Icon(
+                    (isDeleting)
+                        ? (willDelted)
+                            ? Icons.delete_forever
+                            : Icons.delete
+                        : Icons.add,
+                    size: 30,
+                    color: Colors.white)),
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
