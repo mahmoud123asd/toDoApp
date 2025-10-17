@@ -105,8 +105,8 @@ class TasksDetailsView extends StatelessWidget {
                               if (formkey.currentState!.validate()) {
                                 taskcontroller.addTask(
                                     taskcategory, controller.text.trim());
-
                                 controller.clear();
+                                FocusScope.of(context).unfocus();
                               }
                             },
                             icon: Icon(
